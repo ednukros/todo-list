@@ -103,7 +103,43 @@ li p {
   color: darkslategrey;
 }
 
-.parragraph-invalid{
 
+#nameError {
+  display: none;
+  font-size: 0.8em;
+}
+
+#nameError.visible {
+  display: block;
   color:red;
+  animation: shake 450ms;
+}
+
+#nameError.hidden{
+
+ visibility: hidden;
+ display: none;
+}
+
+input.invalid {
+  border-color: red;
+  
+}
+
+
+@keyframes shake {
+  25% {
+      transform: translateX(4px);
+  }
+  50% {
+      transform: translateX(-4px);
+  }
+  75% {
+      transform: translateX(4px);
+  }
+}
+
+input.valid{
+
+  border-color: black;
 }
